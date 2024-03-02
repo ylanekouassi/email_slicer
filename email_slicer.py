@@ -2,10 +2,8 @@
 
 email = input("Enter your email: ")
 
-#index = email.index("@") (positionning) 
+username = email[ :email.index("@")] #index = email.index("@") (positionning) 
 
-username = email[:email.index("@")]
-print(username)
+domain = email[email.index("@")+1 : -4] # +1 is excluding the "@"/ -4 is excluding ".com"
 
-domain = email[email.index("@")+1:]
-print(domain)
+print(f"Your username is {username} and the domain is {domain}")
